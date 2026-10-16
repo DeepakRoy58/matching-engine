@@ -1,0 +1,23 @@
+{
+  "name": "fifo-matching-engine",
+  "version": "1.0.0",
+  "description": "A simple and fast price-time priority (FIFO) matching engine written in TypeScript",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "example": "tsx examples/basic.ts"
+  },
+  "keywords": ["matching-engine", "order-book", "cex", "dex", "fifo", "typescript", "trading"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  }
+}
