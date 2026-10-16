@@ -3,6 +3,8 @@
 a small, fast and easy to read **price-time priority (fifo)** matching engine written in typescript.
 good for learning, and a solid base for a cex or an off-chain order book of a dex.
 
+![alt text](docs/archiiii.png)
+
 ## how matching works
 
 1. **price priority**: best price goes first (highest bid, lowest ask).
@@ -35,10 +37,10 @@ npm run example
 
 | action              | cost                                   |
 | ------------------- | -------------------------------------- |
-| best bid / ask      | o(1)                                   |
-| cancel order        | o(1) + o(log n) only if level is empty |
-| add order (new)     | o(log n) search + array shift          |
-| add order (old)     | o(1)                                   |
-| match one fill      | o(1)                                   |
+| best bid / ask      | O(1)                                   |
+| cancel order        | O(1) + O(log n) only if level is empty |
+| add order (new)     | O(log n) search + array shift          |
+| add order (old)     | O(1)                                   |
+| match one fill      | O(1)                                   |
 
 `n` = number of price levels (not orders).
